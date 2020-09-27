@@ -105,15 +105,8 @@ var selectTipoMascota = () => {
      return options[tipoSelect.value - 1].textContent;
 };
 
-
 //obtencion de valores
-let propietario = document.getElementById("propietario").value;
-let telefono = document.getElementById("telefono").value;
-let direccion = document.getElementById("direccion").value;
-let nombreMascota = document.getElementById("nombreMascota").value;
-let select = document.getElementById("tipo").value;
-let enfermedad = document.getElementById("enfermedad").value;
-let resultado = document.getElementById("resultado");
+
 
 // obtener propiedades del form
 let form = document.querySelector("form");
@@ -122,7 +115,15 @@ form.addEventListener("submit", mostrarDatos);
 // funcion para mostrar datos en pantalla segun seleccion de tipo de mascota
 function mostrarDatos(event) {
      event.preventDefault();
-
+     
+     let propietario = document.getElementById("propietario").value;
+     let telefono = document.getElementById("telefono").value;
+     let direccion = document.getElementById("direccion").value;
+     let nombreMascota = document.getElementById("nombreMascota").value;
+     let select = document.getElementById("tipo").value;
+     let enfermedad = document.getElementById("enfermedad").value;
+     let resultado = document.getElementById("resultado");
+     
      switch (select) {
           case "1":
                let perro = new Perro(
